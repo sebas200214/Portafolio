@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <title>Contacto</title>
+</head>
+<body>
+    <header class="enbacezado">
+        <div>
+            <a class="logo" href="index.html">
+                Sebastián Viera
+            </a>          
+        </div>
+        <nav class="nav-menu">
+
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30"
+                        style=" fill:#0B0D17;">
+                        <path class="menu-color"
+                            d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z">
+                        </path>
+                    </svg>
+                </i>
+            </label>
+            <ul>
+                <li><a href="index.html">Galería</a></li>
+                <li><a href="sobremi.html">Sobre Mi</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li>
+                    <button class="switch" id="switch">
+                        <span><i class="fas fa-sun"></i></span>
+                        <span><i class="fas fa-moon"></i></span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+ 
+    <section class="contenedor-main">
+        <form id="form" class="formulario" action="https://formspree.io/f/xeqvyzdk"
+        method="POST">
+            <fieldset>
+                <legend>Contactame llenando todos los campos</legend>
+                <input type="hidden" name="apikey" value="60fc9fb7-00e7-4fc5-a821-ada4b795a036">
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label for="name"></label>
+                        <input method="POST" name="name" required type="text" id="name" class="input-text" placeholder="Nombre">
+                    </div>
+    
+                    <div class="campo">
+                        <label for="email"></label>
+                        <input method="POST" name="email" id="email" class="input-text" type="email" required placeholder="Correo">
+                    </div>
+    
+                    <div class="campo campo-texto" id="mensaje">
+                        <label for="message"></label>
+                        <textarea method="POST" id="message" name="message" placeholder="Mensaje" class="input-text"></textarea>
+                    </div>
+                </div> <!-- .contenedor-campos-->
+    
+                <div class="enviar">
+                    <input class="boton" type="submit" value="Enviar">
+                </div>
+            </fieldset>
+        </form>
+
+        <div class="modal-container">
+            <div class="modal modal-close">
+                <p class="close">X</p>
+                <img src="images/iconmonstr-check-mark-7.svg" alt="check">
+                <div class="modal-textos">
+                    <h2>Enviado</h2>
+                    <p class="texto-modal">Me pondré en contacto contigo lo más pronto posible.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    
+
+    <footer>
+        <p class="pie content">&copy; 2021 Sebastián Viera. Todos los derechos reservados</p>
+	</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
